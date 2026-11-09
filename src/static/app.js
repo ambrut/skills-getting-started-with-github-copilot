@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function escapeHtml(value) {
     const div = document.createElement("div");
     div.textContent = value;
-    return div.innerHTML;
+    return div.innerHTML.replace(/"/g, "&quot;");
   }
 
   // Function to fetch activities from API
